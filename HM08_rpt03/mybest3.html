@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>HM08 Best3</title>
+    <script>
+      function drawImage() {
+        var sel = document.getElementById("trip");
+        var img = document.getElementById("tripimage");
+        img.src = sel.options[sel.selectedIndex].value;
+      }
+    </script>
+  </head>
+  <body onload="drawImage()"><br><br>
+    <h2>가고싶은 곳 Best3</h2>
+    <hr />
+    <form>
+      <select id="trip" onchange="drawImage()">
+        <option value="media/Bluelagoon.jpg">1. 블루라군(아이슬란드)</option
+        ><option value="media/Faroeisland.jpg">2. 페로 제도</option
+        ><option value="media/Dolomites.jpg">3. 돌로마이트(이탈리아)</option></select
+      >
+    </form>
+    <img id="tripimage" src="media/Bluelagoon.jpg" alt="" />
+  </body>
+</html>
